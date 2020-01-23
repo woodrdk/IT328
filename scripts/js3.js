@@ -8,6 +8,7 @@ function js3(){
         document.getElementById("reg").innerHTML = "Error " + num + " is not a number";
     }
     else{
+        num = Math.trunc(num);
         document.getElementById("reg").innerHTML = "Non Recursive method";
         num++;
         let list = "<ul>";

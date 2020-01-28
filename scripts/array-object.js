@@ -3,7 +3,8 @@
 // assignment supplied array
 let array = [-1, 5, "cat", false, 10.2, true, "dog"];
 // prints results of conversion to html
-document.getElementById("result").innerHTML = arrToObject(array);
+let arr = "Array-> ";
+document.getElementById("result").innerHTML = arr + array.toString() + "<br>" + arrToObject(array);
 
 // converts the array to an object
 function arrToObject(array) {
@@ -28,15 +29,15 @@ function js4(){
     let value = document.getElementById("array").value;
     let array2 = value.split(' ');
     for(let i = 0; i < array2.length; i++){
-        if(array2[i] == "true"){
+        if(array2[i] === "true"){
             array2[i] = true;
         }
-        else if(array2[i] == "false"){
+        else if(array2[i] === "false"){
             array2[i] = false;
         }
         else if(!isNaN(array2[i])){
             array2[i] = parseInt(array2[i]);
         }
     }
-    document.getElementById("result2").innerHTML = arrToObject(array2); //array2.toString();
+    document.getElementById("result2").innerHTML = "Array-> " + array2.toString() + "<br>" + arrToObject(array2); //array2.toString();
 }
